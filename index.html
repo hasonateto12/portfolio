@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio - Hassu</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="container">
+    <img class="avatar" src="profile.jpg" alt="Profile" />
+    <div>
+        <h1>שלום, אני Hassu 👋</h1>
+        <p>סטודנט DevOps | Docker | CI/CD | Linux</p>
+        <div class="links">
+            <a href="https://github.com/USERNAME" target="_blank">GitHub</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section id="about" class="card">
+        <h2>עליי</h2>
+        <p>כאן תכתוב 3–5 שורות עליך (לימודים/מטרה/תחומי עניין).</p>
+    </section>
+
+    <section id="skills" class="card">
+        <h2>Skills</h2>
+        <ul class="chips">
+            <li>Docker</li><li>GitHub Actions</li><li>Linux</li><li>Node.js</li><li>Networking</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="card">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Todo App</h3>
+                <p>אפליקציית משימות פשוטה.</p>
+                <a href="https://PROJECT1_SUBDOMAIN" target="_blank">Live</a>
+                <a href="https://github.com/USERNAME/PROJECT1_REPO" target="_blank">Code</a>
+            </div>
+
+            <div class="project">
+                <h3>Project עם DB</h3>
+                <p>אפליקציה עם בסיס נתונים (MySQL/Mongo/Postgres).</p>
+                <a href="https://PROJECT2_SUBDOMAIN" target="_blank">Live</a>
+                <a href="https://github.com/USERNAME/PROJECT2_REPO" target="_blank">Code</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="container footer">
+    <p>© <span id="y"></span> Hassu</p>
+</footer>
+
+<script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
