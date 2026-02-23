@@ -38,6 +38,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/ubuntu/portfolio
-            docker pull hasonatet12/portfolio:latest
-            docker-compose down
-            docker-compose up -d
+            docker-compose pull
+            docker-compose up -d --force-recreate
