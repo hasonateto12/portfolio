@@ -1,14 +1,263 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Arial, sans-serif; background: #0b1220; color: #e6e6e6; }
-a { color: #7dd3fc; text-decoration: none; margin-right: 12px; }
-.container { max-width: 980px; margin: 0 auto; padding: 20px; }
-header { display: flex; gap: 18px; align-items: center; }
-.avatar { width: 88px; height: 88px; border-radius: 50%; object-fit: cover; border: 2px solid #334155; }
-.links a { display: inline-block; padding: 6px 10px; border: 1px solid #334155; border-radius: 10px; }
-.card { background: #0f172a; border: 1px solid #1f2937; border-radius: 16px; padding: 18px; margin-top: 16px; }
-.chips { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.chips li { background: #111827; border: 1px solid #334155; padding: 6px 10px; border-radius: 999px; }
-.projects { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.project { border: 1px solid #334155; border-radius: 14px; padding: 14px; }
-.footer { opacity: 0.8; }
-@media (max-width: 700px) { .projects { grid-template-columns: 1fr; } header { flex-direction: column; align-items: flex-start; } }
+:root{
+    --bg:#0b1220;
+    --card:#0f1a2e;
+    --card2:#0c1628;
+    --text:#e8eefc;
+    --muted:#a7b4d6;
+    --primary:#4f8cff;
+    --primary2:#2f6bff;
+    --border:rgba(255,255,255,.08);
+    --shadow:0 18px 60px rgba(0,0,0,.35);
+    --radius:18px;
+}
+
+*{box-sizing:border-box}
+
+html,body{height:100%}
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(1200px 500px at 20% 0%, rgba(79,140,255,.25), transparent 60%),
+    radial-gradient(1000px 500px at 80% 20%, rgba(46,213,255,.15), transparent 55%),
+    var(--bg);
+    color:var(--text);
+}
+
+a{color:inherit;text-decoration:none}
+
+.container{
+    width:min(1100px, 92%);
+    margin:0 auto;
+}
+
+.hero{
+    padding:40px 0 18px;
+}
+
+.heroCard{
+    display:flex;
+    gap:22px;
+    align-items:center;
+    padding:22px;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    box-shadow: var(--shadow);
+}
+
+.avatar{
+    width:92px;
+    height:92px;
+    border-radius:999px;
+    object-fit:cover;
+    border:2px solid rgba(255,255,255,.14);
+}
+
+.heroInfo h1{
+    margin:0;
+    font-size:28px;
+    letter-spacing:.2px;
+}
+
+.subtitle{
+    margin:8px 0 14px;
+    color:var(--muted);
+    line-height:1.4;
+}
+
+.wave{display:inline-block; transform-origin:70% 70%; animation: wave 2.6s infinite;}
+@keyframes wave{
+    0%,100%{transform:rotate(0deg)}
+    10%{transform:rotate(12deg)}
+    20%{transform:rotate(-6deg)}
+    30%{transform:rotate(10deg)}
+    40%{transform:rotate(-4deg)}
+    50%{transform:rotate(6deg)}
+    60%{transform:rotate(0deg)}
+}
+
+.ctaRow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:14px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 14px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.04);
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    background:rgba(255,255,255,.07);
+    border-color:rgba(255,255,255,.14);
+}
+
+.btn.primary{
+    background: linear-gradient(135deg, var(--primary), var(--primary2));
+    border-color: transparent;
+}
+
+.btn.primary:hover{
+    filter:brightness(1.05);
+}
+
+.btn.ghost{
+    background:rgba(255,255,255,.03);
+}
+
+.chipsRow{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+.chip{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 12px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background:rgba(0,0,0,.12);
+    color:var(--text);
+    font-size:14px;
+}
+
+main{padding:18px 0 42px}
+
+.card{
+    margin-top:16px;
+    padding:18px 18px;
+    border-radius:var(--radius);
+    border:1px solid var(--border);
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+}
+
+.card h2{
+    margin:0 0 10px;
+    font-size:20px;
+}
+
+.text{
+    margin:0;
+    color:var(--text);
+    line-height:1.65;
+}
+
+.muted{color:var(--muted); margin:0}
+
+.skillsGrid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:12px;
+}
+
+.skill{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    padding:14px;
+    border-radius:16px;
+    border:1px solid var(--border);
+    background: rgba(0,0,0,.12);
+}
+
+.skill i{
+    font-size:20px;
+    margin-top:2px;
+    color:rgba(255,255,255,.9);
+}
+
+.skill h3{
+    margin:0;
+    font-size:16px;
+}
+
+.skill p{
+    margin:6px 0 0;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.4;
+}
+
+.sectionHead{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:10px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:14px;
+}
+
+.project{
+    border-radius:16px;
+    border:1px solid var(--border);
+    background: linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.10));
+    padding:16px;
+    transition: transform .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.project:hover{
+    transform:translateY(-3px);
+    border-color:rgba(255,255,255,.16);
+    background: linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.12));
+}
+
+.projectTop h3{
+    margin:10px 0 8px;
+    font-size:18px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 10px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    background: rgba(79,140,255,.12);
+    color: rgba(232,238,252,.95);
+    font-size:13px;
+    font-weight:700;
+}
+
+.projectActions{
+    display:flex;
+    gap:10px;
+    margin-top:14px;
+    flex-wrap:wrap;
+}
+
+.footer{
+    padding:18px 0 26px;
+    color:var(--muted);
+    text-align:center;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+    .skillsGrid{grid-template-columns: repeat(2, 1fr);}
+    .projects{grid-template-columns: 1fr;}
+}
+
+@media (max-width: 520px){
+    .heroCard{flex-direction:column; align-items:flex-start;}
+    .avatar{width:86px;height:86px;}
+    .skillsGrid{grid-template-columns: 1fr;}
+}
