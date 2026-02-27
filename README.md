@@ -8,7 +8,7 @@ This project was built as part of a **DevOps course assignment** and demonstrate
 
 ## Live Website
 
-🌐 http://hasonatet12.duckdns.org
+🌐 https://hasonatet12.duckdns.org/
 
 ---
 
