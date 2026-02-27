@@ -43,4 +43,6 @@ jobs:
           script: |
             cd /home/ubuntu/portfolio
             docker compose pull
-            docker compose up -d --force-recreate --remove-orphans
+            docker compose down --remove-orphans || true
+            docker rm -f portfolio || true
+            docker compose up -d --force-recreate
