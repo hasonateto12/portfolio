@@ -42,5 +42,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/ubuntu/portfolio
-            docker-compose pull
-            docker-compose up -d --force-recreate --remove-orphans
+            docker compose pull
+            docker compose up -d --force-recreate --remove-orphans
