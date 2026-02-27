@@ -1,171 +1,240 @@
 <!doctype html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portfolio - Saed Hassuna</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Icons (Font Awesome) -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-          referrerpolicy="no-referrer" />
+  <title>Portfolio - Saed Hassuna</title>
+  <meta name="description" content="Portfolio של סעיד חסונה — DevOps, Docker, CI/CD, Linux, Node.js" />
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Icons (Font Awesome) -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
 </head>
 
 <body>
+  <a class="skipLink" href="#main">דלג לתוכן</a>
 
-<header class="container hero">
-    <div class="heroCard">
-        <img class="avatar" src="teto.jpg" alt="Profile" />
+  <!-- Top Nav -->
+  <header class="topbar">
+    <div class="container topbarInner">
+      <a class="brand" href="#home" aria-label="חזרה לראש העמוד">
+        <i class="fa-solid fa-code"></i>
+        <span>Saed Hassuna</span>
+      </a>
 
-        <div class="heroInfo">
-            <h1>שלום, אני סעיד חסונה <span class="wave">👋</span></h1>
-            <p class="subtitle">Software Engineering Student | DevOps | Docker | CI/CD | Linux</p>
-
-            <div class="ctaRow">
-                <a class="btn primary" href="#projects">
-                    <i class="fa-solid fa-diagram-project"></i>
-                    Projects
-                </a>
-
-                <a class="btn ghost" href="https://github.com/hasonateto12" target="_blank" rel="noreferrer">
-                    <i class="fa-brands fa-github"></i>
-                    GitHub
-                </a>
-
-                <!-- תעדכן את הלינק ללינקדאין שלך -->
-                <a class="btn ghost" href="https://www.linkedin.com/in/teto-hassuna-6bbb1a283/" target="_blank" rel="noreferrer">
-                    <i class="fa-brands fa-linkedin"></i>
-                    LinkedIn
-                </a>
-            </div>
-
-            <div class="chipsRow">
-                <span class="chip"><i class="fa-brands fa-docker"></i> Docker</span>
-                <span class="chip"><i class="fa-brands fa-node-js"></i> Node.js</span>
-                <span class="chip"><i class="fa-brands fa-linux"></i> Linux</span>
-                <span class="chip"><i class="fa-solid fa-gear"></i> CI/CD</span>
-            </div>
-        </div>
+      <nav class="nav" aria-label="תפריט ראשי">
+        <a class="navLink" href="#about">אודות</a>
+        <a class="navLink" href="#skills">Skills</a>
+        <a class="navLink" href="#projects">Projects</a>
+        <a class="navLink" href="#contact">צור קשר</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-<main class="container">
+  <!-- Hero -->
+  <section id="home" class="container hero" aria-label="כותרת ראשית">
+    <div class="heroCard">
+      <img class="avatar" src="teto.jpg" alt="תמונת פרופיל של סעיד חסונה" />
+
+      <div class="heroInfo">
+        <h1>שלום, אני סעיד חסונה <span class="wave" aria-hidden="true">👋</span></h1>
+        <p class="subtitle">Software Engineering Student | DevOps | Docker | CI/CD | Linux</p>
+
+        <div class="ctaRow" role="group" aria-label="קישורים מהירים">
+          <a class="btn primary" href="#projects">
+            <i class="fa-solid fa-diagram-project" aria-hidden="true"></i>
+            Projects
+          </a>
+
+          <a class="btn ghost" href="https://github.com/hasonateto12" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            GitHub
+          </a>
+
+          <a class="btn ghost" href="https://www.linkedin.com/in/teto-hassuna-6bbb1a283/" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="chipsRow" aria-label="טכנולוגיות מובילות">
+          <span class="chip"><i class="fa-brands fa-docker" aria-hidden="true"></i> Docker</span>
+          <span class="chip"><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js</span>
+          <span class="chip"><i class="fa-brands fa-linux" aria-hidden="true"></i> Linux</span>
+          <span class="chip"><i class="fa-solid fa-gear" aria-hidden="true"></i> CI/CD</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main" class="container" tabindex="-1">
+    <!-- About -->
     <section id="about" class="card">
-        <h2>קצת עליי:</h2>
-        <p class="text">
-            אני סטודנט להנדסת תוכנה, אוהב לבנות מערכות אמיתיות ולהרים פרויקטים מקצה לקצה:
-            פיתוח, Docker, פריסה לשרת, דומיינים, Nginx ו־HTTPS.
-            המטרה שלי: להמשיך להשתפר ב־DevOps, Cloud ואבטחת מידע.
-        </p>
+      <h2>קצת עליי</h2>
+      <p class="text">
+        אני סטודנט להנדסת תוכנה, אוהב לבנות מערכות אמיתיות ולהרים פרויקטים מקצה לקצה:
+        פיתוח, Docker, פריסה לשרת, דומיינים, Nginx ו־HTTPS.
+        המטרה שלי: להמשיך להשתפר ב־DevOps, Cloud ואבטחת מידע.
+      </p>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="card">
-        <h2>Skills</h2>
-        <div class="skillsGrid">
-            <div class="skill">
-                <i class="fa-brands fa-docker"></i>
-                <div>
-                    <h3>Docker</h3>
-                    <p>Build, Images, Compose</p>
-                </div>
-            </div>
+      <h2>Skills</h2>
 
-            <div class="skill">
-                <i class="fa-brands fa-github"></i>
-                <div>
-                    <h3>GitHub Actions</h3>
-                    <p>CI/CD + Deploy via SSH</p>
-                </div>
-            </div>
-
-            <div class="skill">
-                <i class="fa-brands fa-linux"></i>
-                <div>
-                    <h3>Linux</h3>
-                    <p>Ubuntu, SSH, Services</p>
-                </div>
-            </div>
-
-            <div class="skill">
-                <i class="fa-brands fa-node-js"></i>
-                <div>
-                    <h3>Node.js</h3>
-                    <p>Express APIs + MySQL</p>
-                </div>
-            </div>
-
-            <div class="skill">
-                <i class="fa-solid fa-network-wired"></i>
-                <div>
-                    <h3>Networking</h3>
-                    <p>Ports, Reverse Proxy, DNS</p>
-                </div>
-            </div>
+      <div class="skillsGrid">
+        <div class="skill">
+          <i class="fa-brands fa-docker" aria-hidden="true"></i>
+          <div>
+            <h3>Docker</h3>
+            <p>Build, Images, Compose</p>
+          </div>
         </div>
+
+        <div class="skill">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <div>
+            <h3>GitHub Actions</h3>
+            <p>CI/CD + Deploy via SSH</p>
+          </div>
+        </div>
+
+        <div class="skill">
+          <i class="fa-brands fa-linux" aria-hidden="true"></i>
+          <div>
+            <h3>Linux</h3>
+            <p>Ubuntu, SSH, Services</p>
+          </div>
+        </div>
+
+        <div class="skill">
+          <i class="fa-brands fa-node-js" aria-hidden="true"></i>
+          <div>
+            <h3>Node.js</h3>
+            <p>Express APIs + MySQL</p>
+          </div>
+        </div>
+
+        <div class="skill">
+          <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+          <div>
+            <h3>Networking</h3>
+            <p>Ports, Reverse Proxy, DNS</p>
+          </div>
+        </div>
+
+        <div class="skill">
+          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          <div>
+            <h3>Security</h3>
+            <p>HTTPS, Nginx, Best Practices</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="card">
-        <div class="sectionHead">
-            <h2>Projects</h2>
-            <p class="muted">שני פרויקטים שעובדים Live על השרת שלך עם Nginx + HTTPS</p>
+      <div class="sectionHead">
+        <div>
+          <h2>Projects</h2>
+          <p class="muted">שני פרויקטים שעובדים Live על השרת שלך עם Nginx + HTTPS</p>
         </div>
+      </div>
 
-        <div class="projects">
+      <div class="projects">
+        <article class="project">
+          <div class="projectTop">
+            <div class="badge"><i class="fa-solid fa-database" aria-hidden="true"></i> Node.js + MySQL</div>
+            <h3>Blood Pressure Monitoring System</h3>
+            <p class="text">
+              מערכת לניהול משתמשים ומדידות לחץ דם + סטטיסטיקות חודשיות + Swagger.
+              מפורסם עם Docker Compose כולל DB וטעינת SQL.
+            </p>
+          </div>
 
-            <article class="project">
-                <div class="projectTop">
-                    <div class="badge"><i class="fa-solid fa-database"></i> Node.js + MySQL</div>
-                    <h3>Blood Pressure Monitoring System</h3>
-                    <p class="text">
-                        מערכת לניהול משתמשים ומדידות לחץ דם + סטטיסטיקות חודשיות + Swagger.
-                        מפורסם עם Docker Compose כולל DB וטעינת SQL.
-                    </p>
-                </div>
+          <div class="projectActions">
+            <a class="btn primary" href="https://hasona-bp.duckdns.org" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-globe" aria-hidden="true"></i> Live
+            </a>
+            <a class="btn ghost" href="https://github.com/hasonateto12/blood_pressure" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+            </a>
+          </div>
+        </article>
 
-                <div class="projectActions">
-                    <a class="btn primary" href="https://hasona-bp.duckdns.org" target="_blank" rel="noreferrer">
-                        <i class="fa-solid fa-globe"></i> Live
-                    </a>
-                    <a class="btn ghost" href="https://github.com/hasonateto12/blood_pressure" target="_blank" rel="noreferrer">
-                        <i class="fa-brands fa-github"></i> Code
-                    </a>
-                </div>
-            </article>
+        <article class="project">
+          <div class="projectTop">
+            <div class="badge"><i class="fa-brands fa-react" aria-hidden="true"></i> React + Nginx</div>
+            <h3>Small Shop</h3>
+            <p class="text">
+              אפליקציית חנות קטנה עם React Router.
+              בנייה ב־Multi-stage Dockerfile והגשה דרך Nginx.
+            </p>
+          </div>
 
-            <article class="project">
-                <div class="projectTop">
-                    <div class="badge"><i class="fa-brands fa-react"></i> React + Nginx</div>
-                    <h3>Small Shop</h3>
-                    <p class="text">
-                        אפליקציית חנות קטנה עם React Router.
-                        בנייה ב־Multi-stage Dockerfile והגשה דרך Nginx.
-                    </p>
-                </div>
-
-                <div class="projectActions">
-                    <a class="btn primary" href="https://hasona-shop.duckdns.org" target="_blank" rel="noreferrer">
-                        <i class="fa-solid fa-globe"></i> Live
-                    </a>
-                    <a class="btn ghost" href="https://github.com/hasonateto12/Small-Shop" target="_blank" rel="noreferrer">
-                        <i class="fa-brands fa-github"></i> Code
-                    </a>
-                </div>
-            </article>
-
-        </div>
+          <div class="projectActions">
+            <a class="btn primary" href="https://hasona-shop.duckdns.org" target="_blank" rel="noreferrer">
+              <i class="fa-solid fa-globe" aria-hidden="true"></i> Live
+            </a>
+            <a class="btn ghost" href="https://github.com/hasonateto12/Small-Shop" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+            </a>
+          </div>
+        </article>
+      </div>
     </section>
 
-</main>
+    <!-- Contact -->
+    <section id="contact" class="card">
+      <div class="sectionHead">
+        <div>
+          <h2>צור קשר</h2>
+          <p class="muted">אפשר לפנות אליי דרך הרשתות / מייל</p>
+        </div>
+      </div>
 
-<footer class="container footer">
+      <div class="contactGrid">
+        <a class="contactItem" href="mailto:hassunateto3@gmail.com">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <div>
+            <span class="contactTitle">Email</span>
+            <span class="contactValue">hassunateto3@gmail.com</span>
+          </div>
+        </a>
+
+        <a class="contactItem" href="https://github.com/hasonateto12" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <div>
+            <span class="contactTitle">GitHub</span>
+            <span class="contactValue">hasonateto12</span>
+          </div>
+        </a>
+
+        <a class="contactItem" href="https://www.linkedin.com/in/teto-hassuna-6bbb1a283/" target="_blank" rel="noreferrer">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          <div>
+            <span class="contactTitle">LinkedIn</span>
+            <span class="contactValue">teto-hassuna</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
     <p>© <span id="y"></span> Saed Hassuna • DevOps | Docker | Node.js | Linux</p>
-</footer>
+  </footer>
 
-<script>
+  <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-
+  </script>
 </body>
 </html>
